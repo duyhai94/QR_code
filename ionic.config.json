@@ -1,0 +1,7 @@
+{
+  "name": "QR_code_Habeco",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
