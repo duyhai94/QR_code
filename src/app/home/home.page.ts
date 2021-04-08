@@ -20,6 +20,6 @@ export class HomePage {
       value: resultString,
     };
     let value = JSON.stringify(data);
-    this.itemDetail.next(JSON.parse(value));
+    this.itemDetail.next(JSON.parse(resultString));
   }
 }

@@ -29,15 +29,15 @@
 
             <ion-card-content *ngIf="itemDetail | async as itemDetail">
                 <strong> 
-                    Serial: {{itemDetail.value?.Serial}}
+                    Serial: {{itemDetail.Serial}}
                 <br>
-                ItemId: {{itemDetail.value?.ItemId}}
+                ItemId: {{itemDetail.ItemId}}
                 <br>
-                ExpiredOn: {{itemDetail.value?.ExpiredOn | date:'dd-MM-yyyy'}}
+                ExpiredOn: {{itemDetail.ExpiredOn | date:'dd-MM-yyyy'}}
                 <br>
-                CreatedOn: {{itemDetail.value?.CreatedOn | date:'dd-MM-yyyy'}}
+                CreatedOn: {{itemDetail.CreatedOn | date:'dd-MM-yyyy'}}
                 </strong>
-                <br> Link: {{itemDetail.value}}
+                <!-- <br> Link: {{itemDetail} -->
             </ion-card-content>
         </ion-card-header>
     </ion-card>
