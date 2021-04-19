@@ -1,0 +1,74 @@
+.maintenance {
+    padding: 20px;
+    .d-flex {
+        align-items: center;
+    }
+    .title {
+        span {
+            font-size: 20px;
+            font-weight: 600;
+            color: #060606;
+        }
+    }
+    .search-item {
+        width: 125%;
+        position: relative;
+        .searchbar-search-icon .sc-ion-searchbar-ios .ios .hydrated {
+            display: none !important;
+        }
+    }
+    .item {
+        margin-bottom: 25px;
+    }
+    .button-type {
+        display: flex;
+        justify-content: space-evenly;
+        .button-maintenance {
+            --ion-color-base: #d3eee0 !important;
+            border: 1px solid #b1d6c3;
+            --ion-color-contrast: #00a050 !important;
+            border-radius: 12px;
+        }
+        .button-export {
+            border: 1px solid #00a050 !important;
+            border-radius: 12px;
+            --ion-color-base: #fff !important;
+            --ion-color-contrast: #00a050 !important;
+        }
+    }
+    .overflow {
+        height: 68vh;
+        overflow: auto;
+        .item-maintenance {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: -3px 5px 5px -5px #c9c9c9;
+            padding: 10px;
+            margin-bottom: 25px;
+            .item-title {
+                color: #3f3f3f;
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .item-header {
+                height: 35px;
+                background-color: #e5f5ed;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 8px;
+                margin: -10px;
+                padding: 10px;
+            }
+        }
+    }
+    .mt-10 {
+        margin-top: 10px;
+    }
+    .item-serial {
+        display: flex;
+        height: 35px;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

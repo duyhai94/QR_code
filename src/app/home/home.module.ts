@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    ZXingScannerModule
+    RouterModule,
+
   ],
   declarations: [HomePage]
 })

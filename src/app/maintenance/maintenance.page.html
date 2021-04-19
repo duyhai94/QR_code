@@ -1,9 +1,52 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>maintenance</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="maintenance">
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-row class="d-flex">
+        <ion-col size="10" class="title">
+            <span *ngIf="!isShow">Danh sách bảo dưỡng</span>
+            <ion-searchbar showCancelButton="always" class="search-item" *ngIf="isShow" (ionCancel)="hideSearch()" (ionChange)="searchInputChanged($event.target.value)">
+            </ion-searchbar>
+        </ion-col>
+        <ion-col>
+            <img *ngIf="!isShow" (click)="checkSearch()" src="assets/icon/icon-search.svg">
 
-<ion-content>
-
-</ion-content>
+        </ion-col>
+    </ion-row>
+    <div class="button-type">
+        <ion-button color="success"> Nhập </ion-button>
+        <ion-button class="button-maintenance" color="secondary">{{statusText}}</ion-button>
+        <ion-button class="button-export" color="success"> Xuất </ion-button>
+    </div>
+    <ion-item lines="none">
+        <ion-label>Bộ lọc</ion-label>
+        <ion-select value="null" interface="action-sheet" (ionChange)="changeFunction($event)">
+            <ion-select-option value="null">Tất cả</ion-select-option>
+            <ion-select-option value="Mới">Mới</ion-select-option>
+            <ion-select-option value="Đã xác nhận">Đã xác nhận</ion-select-option>
+            <ion-select-option value="Đang bảo dưỡng">Đang bảo dưỡng</ion-select-option>
+            <ion-select-option value="Đang chờ linh kiện">Đang chờ linh kiện</ion-select-option>
+            <ion-select-option value="Bảo dưỡng xong">Bảo dưỡng xong</ion-select-option>
+            <ion-select-option value="Bảo dưỡng thất bại">Bảo dưỡng thất bại</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <div class="overflow">
+        <div *ngFor="let i of listMaintenanceSub" routerLink="{{i.id}}">
+            <div class="item-maintenance">
+                <div class="item-header">
+                    <span class="item-title">ID</span>
+                    <span>{{i?.id}}</span>
+                </div>
+                <div class="item-serial mt-10">
+                    <span class="item-title">Serial</span>
+                    <span>{{i?.serial}}</span>
+                </div>
+                <div class="item-serial">
+                    <span class="item-title">Trạng thái</span>
+                    <span>{{i?.trang_thai}}</span>
+                </div>
+            </div>
+            <!-- {{i | json}} -->
+        </div>
+    </div>
+</div>
