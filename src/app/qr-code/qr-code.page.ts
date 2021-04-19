@@ -8,19 +8,30 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class QrCodePage implements OnInit {
   itemDetail = new BehaviorSubject<any>(null);
+  dataQR: any;
   constructor() {}
   ngOnInit(): void {}
-  clearResult(): void {
-    this.itemDetail = null;
-  }
+  // clearResult(): void {
+  //   this.itemDetail = null;
+  // }
+// resultString: string
+  onCodeResult(ev) {
+    this.dataQR = ev
+    console.log(this.dataQR);
+    
+   
 
-  onCodeResult(resultString: string) {
-    console.log(resultString);
-    const data = {
-      value: resultString,
-    };
-    let value = JSON.stringify(data);
-    this.itemDetail.next(JSON.parse(resultString));
+    
+    
+
+
+    // console.log(resultString);
+    // const data = {
+    //   value: resultString,
+    // };
+    // let value = JSON.stringify(data);
+    // this.itemDetail.next(JSON.parse(resultString));
+
   }
 
 }
