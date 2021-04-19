@@ -1,0 +1,13 @@
+<ion-buttons slot="start">
+    <ion-back-button defaultHref="/home"></ion-back-button>
+</ion-buttons>
+<div class="title">
+    Chi tiết bảo dưỡng
+</div>
+<ion-content>
+    <app-card-detail [cardData]="detailGoods"></app-card-detail>
+    <app-card-detail [cardData]="detailInfo"></app-card-detail>
+    <app-card-detail [cardData]="detailAccessories" (callBack)="createAccessories()"></app-card-detail>
+    <app-card-detail [cardData]="detailHistoryAction"></app-card-detail>
+    <app-card-detail [cardData]="detailHistoryMaintenance"></app-card-detail>
+</ion-content>

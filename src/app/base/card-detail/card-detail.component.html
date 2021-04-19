@@ -1,0 +1,47 @@
+<div class="card-detail base-card" *ngIf="cardData.type == 'card'">
+    <span class="title">
+    {{ cardData.title }}
+  </span>
+    <ion-card>
+        <ion-grid>
+            <ion-row *ngFor="let item of cardData.data; let i=index" [class]="i=== cardData.data.length-1? 'border-none' : ''">
+                <ion-col size="6">
+                    {{ item.name }}
+                </ion-col>
+                <ion-col size="6" class="value-style">
+                    {{ item.value }}
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+</div>
+<div class="card-table base-card" *ngIf="cardData.type == 'table'">
+    <ion-button *ngIf="cardData.btnCreate" fill="outline" class="card-btn" (click)="callBack.emit()">
+        <img src="assets/icon/plus-icon.svg" alt=""> Thêm mới
+    </ion-button>
+    <span class="title">
+    {{ cardData.title }}
+  </span>
+    <ion-card>
+        <ion-grid>
+            <ion-row class="table-head">
+                <ion-col *ngFor="let item of cardData.columns; let i=index" [size]="cardData.columns.length===3 ? 4 : 6" [class]="i=== cardData.columns.length-1? 'right-style' : ''">
+                    {{item.label}}
+                </ion-col>
+            </ion-row>
+            <ion-row class="table-body" *ngFor="let item of cardData.data">
+                <ion-col *ngFor="let a of cardData.columns; let i=index" [size]="cardData.columns.length===3 ? 4 : 6" [class]="i=== cardData.columns.length-1? 'right-style' : ''">
+                    <span *ngIf="a.type==='text'">
+            {{item[a.condition]}}
+          </span>
+                    <span *ngIf="a.type==='number'">
+            {{item[a.condition] | number}}
+          </span>
+                    <span *ngIf="a.type==='date'">
+            {{item[a.condition] | date:'dd/MM/yyyy'}}
+          </span>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+</div>

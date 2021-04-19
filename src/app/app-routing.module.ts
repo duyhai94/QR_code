@@ -7,10 +7,21 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: 'maintenance',
+    loadChildren: () => import('./maintenance/maintenance.module').then( m => m.MaintenancePageModule)
   },
+  {
+    path: 'qr-code',
+    loadChildren: () => import('./qr-code/qr-code.module').then( m => m.QrCodePageModule)
+  },
+  {
+    path: '',
+    redirectTo: 'qr-code',
+    pathMatch: 'full'
+  }
+
+
+
 ];
 
 @NgModule({

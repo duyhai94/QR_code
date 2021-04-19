@@ -1,0 +1,51 @@
+<ion-header class="logo">
+    <img src="assets/logo.png" alt="">
+</ion-header>
+
+<ion-content>
+    <!-- <ion-button expand="block" color="medium" (click)="qrScan()">Tải ảnh từ máy</ion-button>
+  <ion-button expand="block" color="Primary" name="close" *ngIf="scanActive">Stop</ion-button>
+  <zxing-scanner [torch]="torchEnabled" [(device)]="currentDevice" (scanSuccess)="onCodeResult($event)" [formats]="formatsEnabled" [tryHarder]="tryHarder" (permissionResponse)="onHasPermission($event)" (camerasFound)="onCamerasFound($event)" (torchCompatible)="onTorchCompatible($event)"></zxing-scanner>
+   -->
+
+
+    <ion-card>
+
+    </ion-card>
+
+    <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+
+    <section class="results" *ngIf="itemDetail">
+
+    </section>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>
+                <ion-text>QR Code</ion-text>
+
+                <!-- clead QR code -->
+                <button mat-icon-button (click)="clearResult()">&times;</button>
+            </ion-card-title>
+
+            <ion-card-content *ngIf="itemDetail | async as itemDetail">
+                <strong> 
+                  Serial: {{itemDetail.Serial}}
+              <br>
+              ItemId: {{itemDetail.ItemId}}
+              <br>
+              ExpiredOn: {{itemDetail.ExpiredOn | date:'dd-MM-yyyy'}}
+              <br>
+              CreatedOn: {{itemDetail.CreatedOn | date:'dd-MM-yyyy'}}
+              </strong>
+                <!-- <br> Link: {{itemDetail} -->
+            </ion-card-content>
+        </ion-card-header>
+    </ion-card>
+</ion-content>
+
+<ion-footer class="footer">
+    <img src="assets/logo.png" alt="">
+    <p>
+        TỔNG CÔNG TY CỔ PHẦN BIA - RƯỢU - NƯỚC GIẢI KHÁT HÀ NỘI
+    </p>
+</ion-footer>

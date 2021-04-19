@@ -1,0 +1,21 @@
+<div class="modal-create-wrap">
+    <div class="title">
+        {{ title }}
+    </div>
+    <form class="form-group">
+        <div class="input-item" *ngFor="let item of config">
+            <label for="item.condition">
+        {{ item.label }}
+      </label>
+            <input [type]="item.type" [id]="item.condition" [(ngModel)]="model[item.condition]" [name]="item.condition" class="base-input-style" [placeholder]="item.placeholder" />
+        </div>
+    </form>
+    <div class="button">
+        <ion-button color="medium" (click)="closeModal()">
+            Hủy bỏ
+        </ion-button>
+        <ion-button (click)="dismiss()">
+            Lưu
+        </ion-button>
+    </div>
+</div>
