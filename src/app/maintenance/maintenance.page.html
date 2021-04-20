@@ -3,49 +3,23 @@
         <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
     <ion-row class="d-flex">
-        <ion-col
-            size="10"
-            class="title"
-        >
+        <ion-col size="10" class="title">
             <span *ngIf="!isShow">Danh sách bảo dưỡng</span>
-            <ion-searchbar
-                showCancelButton="always"
-                class="search-item"
-                *ngIf="isShow"
-                (ionCancel)="hideSearch()"
-                (ionChange)="searchInputChanged($event.target.value)"
-            >
+            <ion-searchbar showCancelButton="always" class="search-item" *ngIf="isShow" (ionCancel)="hideSearch()" (ionChange)="searchInputChanged($event.target.value)">
             </ion-searchbar>
         </ion-col>
         <ion-col>
-            <img
-                *ngIf="!isShow"
-                (click)="checkSearch()"
-                src="assets/icon/icon-search.svg"
-            >
+            <img *ngIf="!isShow" (click)="checkSearch()" src="assets/icon/icon-search.svg">
         </ion-col>
     </ion-row>
     <div class="button-type">
-        <ion-button
-            color="success"
-            routerLink="/qr-code"
-        > Nhập </ion-button>
-        <ion-button
-            class="button-maintenance"
-            color="secondary"
-        >{{statusText}}</ion-button>
-        <ion-button
-            class="button-export"
-            color="success"
-        > Xuất </ion-button>
+        <ion-button color="success" routerLink="/qr-code"> Nhập </ion-button>
+        <ion-button class="button-maintenance" color="secondary">{{statusText}}</ion-button>
+        <ion-button class="button-export" color="success" routerLink="/qr-code"> Xuất </ion-button>
     </div>
     <ion-item lines="none">
         <ion-label>Bộ lọc</ion-label>
-        <ion-select
-            value="null"
-            interface="action-sheet"
-            (ionChange)="changeFunction($event)"
-        >
+        <ion-select value="null" interface="action-sheet" (ionChange)="changeFunction($event)">
             <ion-select-option value="null">Tất cả</ion-select-option>
             <ion-select-option value="Mới">Mới</ion-select-option>
             <ion-select-option value="Đã xác nhận">Đã xác nhận</ion-select-option>
@@ -56,10 +30,7 @@
         </ion-select>
     </ion-item>
     <div class="overflow">
-        <div
-            *ngFor="let i of listMaintenanceSub"
-            [routerLink]="i.id"
-        >
+        <div *ngFor="let i of listMaintenanceSub" [routerLink]="i.id">
             <div class="item-maintenance">
                 <div class="item-header">
                     <span class="item-title">ID</span>

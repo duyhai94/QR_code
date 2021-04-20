@@ -11,6 +11,11 @@
         ion-back-button {
             --color: var(--ion-color-primary-contrast);
         }
+        .qr-header-btn {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
     }
     ion-content {
         --background: none;
