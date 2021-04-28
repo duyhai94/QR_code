@@ -14,3 +14,25 @@
 .btn-sc:active {
     background-color: #ffffff;
 }
+
+.btn-comfirm {
+    height: 35px;
+    width: 135px;
+    background: #00A050;
+    outline: none;
+    border-radius: 10px;
+    color: var(--ion-color-primary-contrast);
+    font-size: 14px;
+    font-family: "Nuni-Regular";
+}
+
+.btn-cancel {
+    height: 35px;
+    width: 135px;
+    background: #C0C0C0;
+    outline: none;
+    border-radius: 10px;
+    color: var(--ion-color-primary-contrast);
+    font-size: 14px;
+    font-family: "Nuni-Regular";
+}
