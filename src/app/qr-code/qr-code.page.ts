@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -9,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 export class QrCodePage implements OnInit {
   itemDetail = new BehaviorSubject<any>(null);
   dataQR: any;
-  constructor() {}
+  constructor(private router: Router) {}
   ngOnInit(): void {}
   // clearResult(): void {
   //   this.itemDetail = null;
@@ -19,7 +20,7 @@ export class QrCodePage implements OnInit {
     this.dataQR = ev
     console.log(this.dataQR);
     console.log(ev);
-    
+    this.router.navigate([this.dataQR])
 
     
    
