@@ -8,30 +8,41 @@ import { Component } from '@angular/core';
 export class HomePage {
     listBtn = [
         {
-            icon: 'assets/icon/AssetManagement.svg',
-            text: 'Quản lý tài sản',
+            icon: 'assets/icon/home/icon-enter.svg',
+            text: 'Nhập bảo dưỡng',
+            route: '/qr-code'
+        },
+        {
+            icon: 'assets/icon/home/icon-import.svg',
+            text: 'Nhập kho',
+            route: '/qr-code'
+        },
+        {
+            icon: 'assets/icon/home/icon-accessories.svg',
+            text: 'Thêm linh kiện',
+            route: '/qr-code'
+        },
+        {
+            icon: 'assets/icon/home/icon-out.svg',
+            text: 'Xuất kho',
+            route: '/qr-code'
+        },
+        {
+            icon: 'assets/icon/home/icon-maintenance.svg',
+            text: 'Xuất bảo dưỡng',
+            route: '/qr-code'
+        },
+        {
+            icon: 'assets/icon/home/icon-search.svg',
+            text: 'Tra cứu',
             route: '/maintenance'
         },
         {
-            icon: 'assets/icon/Maintenance.svg',
-            text: 'Bảo dưỡng',
-            route: '/maintenance'
-        },
-        {
-            icon: 'assets/icon/Warehouse.svg',
-            text: 'Kho hàng',
-            route: '/maintenance'
-        },
-        {
-            icon: 'assets/icon/Report.svg',
-            text: 'Báo cáo',
-            route: '/maintenance'
-        },
-        {
-            icon: 'assets/icon/Setting.svg',
-            text: 'Cài đặt',
-            route: '/tab3'
+            icon: 'assets/icon/home/icon-file.svg',
+            text: 'Danh sách',
+            route: '/list'
         }
+
     ]
     constructor() { }
 

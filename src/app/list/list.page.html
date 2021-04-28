@@ -1,0 +1,26 @@
+<ion-header class="ion-no-border">
+    <app-header-back>
+    </app-header-back>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="list">
+        <ion-row>
+            <ion-col size="12">
+                <app-button></app-button>
+            </ion-col>
+            <ion-col size="12">
+                <app-card-search [label]="'Danh sách bảo dưỡng'"></app-card-search>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="12">
+                <app-card-list [dataCard]="dataCardList "></app-card-list>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+
+</ion-content>

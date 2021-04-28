@@ -18,6 +18,9 @@ export class QrCodePage implements OnInit {
   onCodeResult(ev) {
     this.dataQR = ev
     console.log(this.dataQR);
+    console.log(ev);
+    
+
     
    
 

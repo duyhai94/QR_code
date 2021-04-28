@@ -15,10 +15,24 @@ const routes: Routes = [
     loadChildren: () => import('./qr-code/qr-code.module').then( m => m.QrCodePageModule)
   },
   {
+    path: 'list',
+    loadChildren: () => import('./list/list.module').then( m => m.ListPageModule)
+  },
+  {
+    path: 'list-export',
+    loadChildren: () => import('./list-export/list-export.module').then( m => m.ListExportPageModule)
+  },
+  {
+    path: 'list-import',
+    loadChildren: () => import('./list-import/list-import.module').then( m => m.ListImportPageModule)
+  }
+  ,
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   }
+
 
 
 

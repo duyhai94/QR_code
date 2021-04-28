@@ -3,6 +3,17 @@
 
 /** Ionic CSS Variables **/
 
+//font-font
+@font-face {
+    font-family: "Nuni-Regular";
+    src: url('../assets/font/NunitoSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Nuni-SemiBold";
+    src: url('../assets/font/NunitoSans-SemiBold.ttf');
+}
+
 :root {
     /** primary **/
     --ion-color-primary: #00A050;

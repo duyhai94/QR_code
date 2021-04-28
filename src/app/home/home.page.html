@@ -1,15 +1,18 @@
-<div class="home-page">
-    <ion-header class="logo">
-        <img src="assets/image/header-logo.png">
-    </ion-header>
-    <div class="content">
-        <ion-row *ngFor="let i of listBtn" class="button-home" [routerLink]="i.route">
-            <ion-col size="4" class="icon">
-                <img [src]="i.icon">
-            </ion-col>
-            <ion-col size="8" class="text">
-                {{i?.text}}
+<!-- <div class="home-page"> -->
+<ion-header class="logo">
+    <img src="assets/icon/home/ion-logo.svg">
+</ion-header>
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="6" *ngFor="let i of listBtn">
+                <div class="home-item" [routerLink]="i.route">
+                    <img [src]="i.icon">
+                    <div>{{i?.text}}
+                    </div>
+                </div>
             </ion-col>
         </ion-row>
-    </div>
-</div>
+    </ion-grid>
+</ion-content>
+<!-- </div> -->
