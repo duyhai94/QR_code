@@ -35,7 +35,7 @@ export class HomePage {
         {
             icon: 'assets/icon/home/icon-search.svg',
             text: 'Tra cứu',
-            route: '/maintenance'
+            route: '/qr-code'
         },
         {
             icon: 'assets/icon/home/icon-file.svg',

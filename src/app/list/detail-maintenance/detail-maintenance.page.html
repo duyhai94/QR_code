@@ -1,0 +1,11 @@
+<ion-header>
+    <app-header-back [headerText]="'Chi tiết bảo dưỡng'"></app-header-back>
+</ion-header>
+
+<ion-content>
+    <app-card-detail [cardData]="detailGoods"></app-card-detail>
+    <app-card-detail [cardData]="detailInfo"></app-card-detail>
+    <app-card-detail [cardData]="detailAccessories" (callBack)="createAccessories()"></app-card-detail>
+    <app-card-detail [cardData]="detailHistoryAction"></app-card-detail>
+    <app-card-detail [cardData]="detailHistoryMaintenance"></app-card-detail>
+</ion-content>

@@ -7,7 +7,12 @@ const routes: Routes = [
   {
     path: '',
     component: ListExportPage
-  }
+  },
+  {
+    path: 'detail-export',
+    loadChildren: () => import('./detail-export/detail-export.module').then( m => m.DetailExportPageModule)
+  },
+ 
 ];
 
 @NgModule({

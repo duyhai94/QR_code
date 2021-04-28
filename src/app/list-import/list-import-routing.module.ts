@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: ListImportPage
+  },
+  {
+    path: 'detail-import',
+    loadChildren: () => import('./detail-import/detail-import.module').then( m => m.DetailImportPageModule)
   }
 ];
 

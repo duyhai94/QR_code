@@ -11,6 +11,7 @@ import { ButotnModule } from '../base/button/button.component';
 import { HeaderBackModule } from '../base/header-back/header-back.component';
 import { CardListModule } from '../base/card-list/card-list.component';
 import { CardSearchModule } from '../base/card-search/card-search.component';
+import { CardBaseDetailModule } from '../base/card-detail/card-detail.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { CardSearchModule } from '../base/card-search/card-search.component';
     ButotnModule,
     HeaderBackModule,
     CardListModule,
-    CardSearchModule
+    CardSearchModule,
+    CardBaseDetailModule
   ],
   declarations: [ListExportPage]
 })

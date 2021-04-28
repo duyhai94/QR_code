@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: ListPage
+  },
+  {
+    path: 'detail-maintenance',
+    loadChildren: () => import('./detail-maintenance/detail-maintenance.module').then( m => m.DetailMaintenancePageModule)
   }
 ];
 
