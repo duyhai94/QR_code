@@ -44,4 +44,21 @@
         color: var(--ion-color-primary-contrast);
         text-align: center;
     }
+    .button_bottom {
+        background-color: #fff;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 236px;
+        height: 41px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+            margin: 0;
+            margin-right: 10px;
+        }
+    }
 }
