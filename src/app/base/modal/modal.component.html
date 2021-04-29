@@ -9,7 +9,7 @@
             <label for="condition">
         Nhập tên linh kiện
       </label>
-            <input id="condition" placeholder="Thân van" (click)="presentModal()" class="base-input-style" />
+            <input id="condition" placeholder="Thân van" name="binding" (click)="presentModal()" class="base-input-style" [(ngModel)]="binding" />
         </div>
 
         <div class="input-item" *ngFor="let item of config">

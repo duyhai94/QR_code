@@ -8,19 +8,34 @@ import { IonicModule, ModalController } from '@ionic/angular';
   styleUrls: ['./modal-condition.component.scss'],
 })
 export class ModalConditionComponent implements OnInit {
-
+  value: any;
   constructor( private modal: ModalController) { }
-  data: any;
+  data = {
+    title: "Ống van Spears A-System",
+    list: [
+      {
+        value:"Thân Van"
+      },
+      {
+        value:"Thân Van"
+      },  {
+        value:"Gioăng đỉnh"
+      },  {
+        value:"Đĩa đệm"
+      },  {
+        value:"Lò xo"
+      },  {
+        value:"Ống van"
+      },
+    ]
+  };
   ngOnInit() {}
-  closeModal() {
+  closeModal(ev) {
+    console.log(ev);
     this.modal.dismiss({
-      'dismissed': true
-
+      'dismissed': true,
+      data: ev
     });
-  }
-  getValue() {
-    console.log("dddđ");
-    
   }
 }
 

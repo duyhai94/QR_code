@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule, ModalController } from '@ionic/angular';
 import { ModalConditionComponent } from '../modal-condition/modal-condition.component';
 
@@ -13,6 +13,7 @@ export class ModalCreateComponent  {
   @Input() title: string;
   @Input() config: any;
   @Input() model: any;
+  binding: any;
   constructor(private modalController: ModalController) { }
 
   dismiss() {
@@ -27,12 +28,16 @@ export class ModalCreateComponent  {
       component: ModalConditionComponent,
       cssClass: 'my-custom-class'
     });
+    modal.onDidDismiss().then((res) => {
+      this.binding = res.data.data
+      
+    })
     return await modal.present();
   }
 }
 @NgModule({
   declarations: [ModalCreateComponent],
-  imports: [IonicModule, FormsModule, CommonModule],
+  imports: [IonicModule, FormsModule, CommonModule,ReactiveFormsModule,],
   exports: [ModalCreateComponent],
 })
 export class ModalCreateModule { }
