@@ -123,12 +123,12 @@ detailHistoryMaintenance = {
         componentProps: {
             title: 'Thêm linh kiện sử dụng',
             config: [
-                {
-                    condition: 'accessoriesName',
-                    label: 'Linh kiện',
-                    placeholder: 'Nhập tên linh kiện',
-                    type: 'text',
-                },
+                // {
+                //     condition: 'accessoriesName',
+                //     label: 'Linh kiện',
+                //     placeholder: 'Nhập tên linh kiện',
+                //     type: 'text',
+                // },
                 {
                     condition: 'value',
                     label: 'Số lượng',

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, NgModule, OnInit } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-header-back',
@@ -10,10 +10,12 @@ import { IonicModule } from '@ionic/angular';
 export class HeaderBackComponent implements OnInit {
   @Input() headerTitle;
   @Input() headerText;
-  constructor() { }
+  constructor( private modal : ModalController) { }
 
   ngOnInit() {}
-
+  closeModal() {
+    this.modal.dismiss();
+  }
 }
 
 @NgModule({

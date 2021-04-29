@@ -3,6 +3,15 @@
         {{ title }}
     </div>
     <form class="form-group">
+
+
+        <div class="input-item">
+            <label for="condition">
+        Nhập tên linh kiện
+      </label>
+            <input id="condition" placeholder="Thân van" (click)="presentModal()" class="base-input-style" />
+        </div>
+
         <div class="input-item" *ngFor="let item of config">
             <label for="item.condition">
         {{ item.label }}
